@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>new</title>
+  </head>
+  <body>
+    <h3>Add new product</h3>
+    <form action="/products/<%= id %>" method="post">
+      <label for="name">Enter product name:</label>
+      <input type="text" name="name" id="name" placeholder="productname" />
+      <br />
+      <label for="price">Enter price:</label>
+      <input type="number" name="price" id="price" placeholder="price" />
+      <br />
+      <label for="category">Enter product category:</label>
+      <select name="category" id="category">
+        <option value="fruit">fruit</option>
+        <option value="vegetable">vegetable</option>
+        <option value="dairy">dairy</option>
+      </select>
+      <br />
+      <button>submit</button>
+    </form>
+    <a href="/products">Index</a>
+  </body>
+</html>

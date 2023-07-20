@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show</title>
+  </head>
+  <body>
+    <h3><%= f.name %></h3>
+    <ul>
+      <li>city: <%= f.city %></li>
+      <li>email: <%= f.email %></li>
+    </ul>
+    <div>
+      <% f.products.map((p)=>{ %>
+      <ul>
+        <li><a href="/products/<%= p.id %>/show"><%= p.name %></a></li>
+        <li><%= p.price %></li>
+        <li><%= p.category %></li>
+      </ul>
+
+      <% }) %>
+    </div>
+    <a href="/products/<%= f.id %>/new">add products</a>
+  </body>
+</html>
